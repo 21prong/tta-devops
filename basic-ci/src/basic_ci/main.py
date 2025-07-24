@@ -21,7 +21,7 @@ def main():
             valid_users = validate_users(users_data)
 
             # 3. 활성화된 사용자만 필터링
-            active_users = filter_active_users(valid_users)
+            active_users = filter_active_users(valid_users) 
 
             # 4. 결과 출력
             print("Active Users:")
