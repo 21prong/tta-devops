@@ -3,7 +3,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: fastapi-deployment
-  namespace: <Your Github Unsername>
+  namespace: 21prong
 spec:
   replicas: 1
   selector:
@@ -19,15 +19,15 @@ spec:
         image: ghcr.io/21prong/tta-devops/my-app:latest  # GHCR 이미지 경로
         ports:
         - containerPort: 8000
-      imagePullSecrets:
-      - name: ghcr-secret  # 생성한 ImagePullSecret 참조
+      # imagePullSecrets:
+      # - name: ghcr-secret  # 생성한 ImagePullSecret 참조
 
 ---
 apiVersion: v1
 kind: Service
 metadata:
   name: fastapi-service
-  namespace: <Your Github Unsername>
+  namespace: 21prong
 spec:
   selector:
     app: fastapi
