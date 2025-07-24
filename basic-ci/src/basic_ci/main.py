@@ -18,7 +18,7 @@ def main():
                 continue
 
             # 2. 데이터를 검증하여 유효한 사용자만 필터링
-            valid_users = validate_users(users_data)
+            valid_users = validate_users(users_data)  
 
             # 3. 활성화된 사용자만 필터링
             active_users = filter_active_users(valid_users) 
